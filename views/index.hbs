@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Scrapathon</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<div class="container">
+	<header class="page-header">
+		<h1><img src="img/hackjak2015.png" alt="HackJak 2015"></h1>
+		<h2>Scrapathon</h2>
+	</header>
+	<h3>Participants by total points</h3>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Points</th>
+			<th>Valid CSV count</th>
+			<th>Invalid CSV count</th>
+		</tr>
+		{{#each sortedParticipants}}
+		<tr>
+			<td>{{rank}}. <a href="/details/{{name}}">{{name}}</a></td>
+			<td>{{totalPoints}}</td>
+			<td>{{validCsvCount}}</td>
+			<td>{{invalidCsvCount}}</td>
+		</tr>
+		{{/each}}
+	</table>
+</div>
+
+<script src="js/bundle.js"></script>

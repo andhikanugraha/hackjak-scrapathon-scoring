@@ -1,0 +1,22 @@
+{
+  "name": "hackjak-scrapathon-scorer",
+  "author": "",
+  "version": "0.1.0",
+  "description": "Automated scoring tool for HackJak Scrapathon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "csv-parser": "^1.7.0",
+    "express": "^4.13.2",
+    "glob": "^5.0.14",
+    "hbs": "^3.1.0",
+    "lodash": "^3.10.0",
+    "minimist": "^1.1.2",
+    "open": "0.0.5",
+    "winston": "^1.0.1"
+  }
+}

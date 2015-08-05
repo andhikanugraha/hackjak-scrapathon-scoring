@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Scrapathon</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<div class="container">
+	<header class="page-header">
+		<h1><img src="/img/hackjak2015.png" alt="HackJak 2015"></h1>
+		<h2>Scrapathon</h2>
+	</header>
+	<h3>{{name}}/{{path}}</h3>
+	<table class="table">
+		<tr>
+			{{#each keys}}
+			<th>{{this}}</th>
+			{{/each}}
+		</tr>
+		{{{tableBody}}}
+	</table>
+</div>
+
+<script src="js/bundle.js"></script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Scrapathon</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<div class="container">
+	<header class="page-header">
+		<h1><img src="/img/hackjak2015.png" alt="HackJak 2015"></h1>
+		<h2>Scrapathon</h2>
+	</header>
+	<h3>{{participant.name}}</h3>
+	<table class="table">
+		<tr>
+			<th>Source filename</th>
+			<th>Table ID</th>
+			<th>Result filename</th>
+			<th>Valid?</th>
+			<th>Points</th>
+			<th>Validation error</th>
+		</tr>
+		{{#each participant.sortedSubmissions}}
+		<tr>
+			<td>{{source_filename}}</td>
+			<td>{{table_id}}</td>
+			<td><a href="/details/{{../participant.name}}/{{result_filename}}">{{result_filename}}</a></td>
+			<td>{{#if isValid}}<span class="text-success">Valid</span>{{else}}<span class="text-danger">Invalid</span>{{/if}}</td>
+			<td>{{cellCount}}</td>
+			<td>{{validationError}}</td>
+		</tr>
+		{{/each}}
+		<tr>
+			<th>Total</th>
+			<th></th>
+			<th></th>
+			<th>{{participant.validCsvCount}}</th>
+			<th>{{participant.totalPoints}}</th>
+			<th></th>
+		</tr>
+	</table>
+
+	<h4>Stratified random samples</h4>
+	<table class="table">
+		<tr>
+			<th>Source filename</th>
+			<th>Table ID</th>
+			<th>Result filename</th>
+			<th>Valid?</th>
+			<th>Points</th>
+			<th>Validation error</th>
+		</tr>
+		{{#each samples}}
+		<tr>
+			<td>{{source_filename}}</td>
+			<td>{{table_id}}</td>
+			<td><a href="/details/{{../participant.name}}/{{result_filename}}">{{result_filename}}</a></td>
+			<td>{{#if isValid}}<span class="text-success">Valid</span>{{else}}<span class="text-danger">Invalid</span>{{/if}}</td>
+			<td>{{cellCount}}</td>
+			<td>{{validationError}}</td>
+		</tr>
+		{{/each}}
+	</table>
+</div>
+
+<script src="js/bundle.js"></script>
